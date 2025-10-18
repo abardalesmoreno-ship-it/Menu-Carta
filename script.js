@@ -48,8 +48,7 @@ searchInput.addEventListener('input', () => {
   }
 });
 
-
-// === FUNCIÓN PRINCIPAL PARA FLECHAS ===
+// === FUNCIÓN PRINCIPAL PARA FLECHAS (versión mejorada con última imagen visible) ===
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
   if (!carousel) return;
@@ -59,8 +58,25 @@ function scrollCarousel(id, direction) {
   const itemWidth = item ? item.getBoundingClientRect().width : 260;
   const scrollAmount = Math.round(itemWidth + gap);
 
-  carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  // Calcula la nueva posición del scroll
+  const newScrollLeft = carousel.scrollLeft + scrollAmount * direction;
+
+  // --- Corrección: permitir ver la última tarjeta completa antes de reiniciar ---
+  const nearEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - (itemWidth / 2);
+
+  if (nearEnd && direction === 1) {
+    // Si realmente llegó al final → volver al inicio
+    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+  } else if (newScrollLeft <= 0 && direction === -1) {
+    // Si está al inicio y va a la izquierda → saltar al final
+    carousel.scrollTo({ left: carousel.scrollWidth - carousel.clientWidth, behavior: 'smooth' });
+  } else {
+    // Movimiento normal
+    carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
 }
+
+
 
 // === INSERTAR FLECHAS AUTOMÁTICAMENTE ===
 document.addEventListener("DOMContentLoaded", () => {
