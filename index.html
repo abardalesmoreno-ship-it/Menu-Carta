@@ -1,331 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menú del Restaurante</title>
-  <link rel="icon" href="imagenes/Logo de 7 sopas.jpg">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="estilos2.css">
+  <link rel="stylesheet" href="estilos2.css" />
 </head>
 <body>
-  <div id="animated-bg"></div>
 
   <header>
-    <img src="imagenes/Logo de 7 sopas.jpg" alt="Logo del restaurante">
-    <h1>Menú del Restaurante</h1>
+    <h1>🍴 Menú del Restaurante</h1>
+    <p>Sabores peruanos que conquistan ❤️</p>
   </header>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Busca tu plato, sánguche o bebida...">
+  <div class="category-buttons">
+    <button class="active" data-category="todos">Todos</button>
+    <button data-category="Sándwich">Sándwich</button>
+    <button data-category="platos">Platos Bandera</button>
+    <button data-category="sopas">Sopas</button>
+    <button data-category="postres">Postres</button>
+    <button data-category="bebidas">Bebidas</button>
   </div>
 
-  <!-- ====== MENÚ COMPLETO ====== -->
-  <div class="menu-wrapper" id="menuSection">
+  <!-- ahora cada bloque es una sección con su h2 (subtítulo) -->
+  <main class="menu-wrapper">
 
-    <!-- 🥪 Sánguches -->
-    <section data-category="Sánguches">
-      <h2>🥪 Sandwiches</h2>
-      <div class="menu-carousel" id="sanguches">
-        <div class="card menu-item" data-category="Sánguches">
+    <!-- SÁNGUCHES -->
+    <section class="menu-section" data-category="Sándwich">
+      <h2>🥪 Sándwich</h2>
+      <div class="menu-grid">
+        <div class="menu-item" data-category="Sándwich">
           <img src="imagenes/Sanguches/Pavo a la leña sanguches.jpg" alt="Pavo a la leña">
-          <div class="card-body">
-            <h5>Pavo a la leña</h5>
-            <p>Jugoso pavo cocido lentamente a la leña, servido con cebolla caramelizada y mayonesa casera.</p>
-            <span class="price">S/. 25.00</span>
-          </div>
+          <h5>Pavo a la leña</h5>
+          <p>Pan artesanal con pollo deshilachado y mayonesa casera.</p>
+          <span class="price">S/ 12.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sánguches">
-          <img src="imagenes/Sanguches/Lechon a la leña sanguches.jpg" alt="Lechón a la leña">
-          <div class="card-body">
-            <h5>Lechón a la leña</h5>
-            <p>Tierno lechón dorado al horno de leña con camote glaseado y salsa criolla.</p>
-            <span class="price">S/. 27.00</span>
-          </div>
+        <div class="menu-item" data-category="Sándwich">
+          <img src="imagenes/Sanguches/Pan con Chicharron.jpg" alt="Pan con Chicharron">
+          <h5>Pan con Chicharron</h5>
+          <p>Jamón del país, salsa criolla y pan francés.</p>
+          <span class="price">S/ 10.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sánguches">
-          <img src="imagenes/Sanguches/Pan con Chicharron.jpg" alt="Pan con Chicharrón">
-          <div class="card-body">
-            <h5>Pan con Chicharrón</h5>
-            <p>Crujiente chicharrón de cerdo con camote frito y salsa criolla en pan francés.</p>
-            <span class="price">S/. 23.00</span>
-          </div>
+        <div class="menu-item" data-category="Sándwich">
+          <img src="imagenes/Sanguches/SanguchesMilanesa.jpg" alt="Sanguches Milanesa">
+          <h5>Sanguches Milanesa</h5>
+          <p>Pan francés con chicharrón crocante y camote frito.</p>
+          <span class="price">S/ 14.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sánguches">
-          <img src="imagenes/Sanguches/pollo deshilachado 2.jpg" alt="Sánguche de Pollo Deshilachado">
-          <div class="card-body">
-            <h5>Sánguche de Pollo Deshilachado</h5>
-            <p>Delicioso pollo deshilachado con salsa criolla y aguacate.</p>
-            <span class="price">S/. 24.00</span>
-          </div>
+        <div class="menu-item" data-category="Sándwich">
+          <img src="imagenes/Sanguches/pollo deshilachado 2.jpg" alt="Pollo deshilachado">
+          <h5>Pollo deshilachado</h5>
+          <p>Carne de res, huevo frito y plátano maduro.</p>
+          <span class="price">S/ 15.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sánguches">
-          <img src="imagenes/Sanguches/Sándwichdejamónymanzana.jpg" alt="Sándwich de Jamón y Manzana">
-          <div class="card-body">
-            <h5>Sándwich de Jamón y Manzana</h5>
-            <p>Delicioso sándwich de jamón con rodajas de manzana y queso crema.</p>
-            <span class="price">S/. 22.00</span>
-          </div>
+        <div class="menu-item" data-category="Sándwich">
+          <img src="imagenes/Sanguches/Lechon a la leña sanguches.jpg" alt="Pan de Lechon a la leña">
+          <h5>Lechon a la leña</h5>
+          <p>Carne jugosa cocida al vino con salsa especial.</p>
+          <span class="price">S/ 13.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sánguches">
-          <img src="imagenes/Sanguches/SanguchesMilanesa.jpg" alt="Sánguche de Milanesa">
-          <div class="card-body">
-            <h5>Sánguche de Milanesa</h5>
-            <p>Deliciosa milanesa de pollo empanizada, servida en pan con lechuga y tomate.</p>
-            <span class="price">S/. 29.00</span>
-          </div>
+        <div class="menu-item" data-category="Sándwich">
+          <img src="imagenes/Sanguches/Sándwichdejamónymanzana.jpg" alt="Sándwich de jamón y manzana">
+          <h5>Sándwich de jamón y manzana</h5>
+          <p>Pavo horneado con lechuga, tomate y mayonesa casera.</p>
+          <span class="price">S/ 11.00</span>
         </div>
       </div>
     </section>
 
-    <!-- 🍛 Platos Principales -->
-    <section data-category="Platos Principales">
-      <h2>🍛 Platos Principales</h2>
-      <div class="menu-carousel" id="platos">
-        <div class="card menu-item" data-category="Platos Principales">
+    <!-- PLATOS BANDERA -->
+    <section class="menu-section" data-category="platos">
+      <h2>🍽️ Platos Bandera</h2>
+      <div class="menu-grid">
+        <div class="menu-item" data-category="platos">
           <img src="imagenes/platosprincipales/lomosaltado2.jpg" alt="Lomo Saltado">
-          <div class="card-body">
-            <h5>Lomo Saltado</h5>
-            <p>Carne salteada con cebolla, tomate y papas fritas, acompañada de arroz blanco.</p>
-            <span class="price">S/. 28.00</span>
-          </div>
+          <h5>Lomo Saltado</h5>
+          <p>Clásico plato peruano salteado con papas fritas y arroz.</p>
+          <span class="price">S/ 22.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Platos Principales">
-          <img src="imagenes/platosprincipales/PolloBrosterconChaufa.jpg" alt="Pollo Broster con Chaufa">
-          <div class="card-body">
-            <h5>Pollo Broster con Chaufa</h5>
-            <p>Delicioso pollo broaster acompañado de arroz chaufa y salsa de soya.</p>
-            <span class="price">S/. 30.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item" data-category="Platos Principales">
+        <div class="menu-item" data-category="platos">
           <img src="imagenes/platosprincipales/MilanesadePolloBienPobre.jpg" alt="Milanesa de Pollo Bien Pobre">
-          <div class="card-body">
-            <h5>Milanesa de Pollo Bien Pobre</h5>
-            <p>Deliciosa milanesa de pollo empanizada, servida con arroz y ensalada.</p>
-            <span class="price">S/. 26.00</span>
-          </div>
+          <h5>Milanesa de Pollo Bien Pobre</h5>
+          <p>Pollo desmenuzado en salsa cremosa de ají amarillo.</p>
+          <span class="price">S/ 18.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Platos Principales">
-          <img src="imagenes/platosprincipales/pollosaltado.jpg" alt="pollo saltado"> 
-          <div class="card-body">
-            <h5>Pollo Saltado</h5>
-            <p>Delicioso pollo saltado con cebolla, tomate y papas fritas.</p>
-            <span class="price">S/. 25.00</span>
-          </div>
+        <div class="menu-item" data-category="platos">
+          <img src="imagenes/platosprincipales/PolloBrosterconChaufa.jpg" alt="Pollo Broster con Chaufa">
+          <h5>Pollo Broster con Chaufa</h5>
+          <p>Pescado fresco marinado en limón y acompañado de camote.</p>
+          <span class="price">S/ 20.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Platos Principales">
+        <div class="menu-item" data-category="platos">
+          <img src="imagenes/platosprincipales/pollosaltado.jpg" alt="Pollo Saltado">
+          <h5>Pollo Saltado</h5>
+          <p>Arroz y frijoles fritos acompañados de lomo salteado.</p>
+          <span class="price">S/ 24.00</span>
+        </div>
+        <div class="menu-item" data-category="platos">
           <img src="imagenes/platosprincipales/TallarínalaHuancaínaconLomoSaltado.jpg" alt="Tallarín a la Huancaína con Lomo Saltado">
-          <div class="card-body">
-            <h5>Tallarín a la Huancaína con Lomo Saltado</h5>
-            <p>Tallarines bañados en salsa huancaína, acompañados de lomo saltado.</p>
-            <span class="price">S/. 32.00</span>
-          </div>
+          <h5>Tallarín a la Huancaína con Lomo Saltado</h5>
+          <p>Delicioso arroz sazonado con mariscos frescos.</p>
+          <span class="price">S/ 23.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Platos Principales">
+        <div class="menu-item" data-category="platos">
           <img src="imagenes/platosprincipales/Arrozconmariscos.jpg" alt="Arroz con Mariscos">
-          <div class="card-body">
-            <h5>Arroz con Mariscos</h5>
-            <p>Sabroso arroz con mariscos frescos, sazonado al estilo norteño.</p>
-            <span class="price">S/. 33.00</span>
-          </div>
+          <h5>Arroz con Mariscos</h5>
+          <p>Guiso tradicional con culantro y papas amarillas.</p>
+          <span class="price">S/ 19.00</span>
         </div>
       </div>
     </section>
 
-    <!-- 🍝 Pastas -->
-    <section data-category="Pastas">
-      <h2>🍝 Pastas</h2>
-      <div class="menu-carousel" id="pastas">
-        <div class="card menu-item" data-category="Pastas">
-          <img src="imagenes/Pastas/FettucinialoAlfredo.jpg" alt="Fettucini a lo Alfredo">
-          <div class="card-body">
-            <h5>Fettucini a lo Alfredo</h5>
-            <p>Pasta bañada en cremosa salsa Alfredo con queso parmesano y mantequilla.</p>
-            <span class="price">S/. 26.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/Pastas/FettucinienSalsadeChampiñones.jpg" alt="Fettucini en Salsa de Champiñones">
-          <div class="card-body">
-            <h5>Fettucini en Salsa de Champiñones</h5>
-            <p>Fettucini salteado en cremosa salsa de champiñones y queso parmesano.</p>
-            <span class="price">S/. 27.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/Pastas/FettucinisVerdesconMilanesa.jpg" alt="futtucinis verdes con milanesa">
-          <div class="card-body">
-            <h5>Fettucinis Verdes con Milanesa</h5>
-            <p>Fettucinis verdes acompañados de milanesa de pollo.</p>
-            <span class="price">S/. 28.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/Pastas/TallarinSaltado.jpg" alt="Tallarin Saltado">
-          <div class="card-body">
-            <h5>Tallarin Saltado</h5>
-            <p>Pasta salteada con pollo, verduras y salsa de soya.</p>
-            <span class="price">S/. 24.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/Pastas/TallarinconAtun.jpg" alt="Fettucini con Atún">
-          <div class="card-body">
-            <h5>Fettucini con Atún</h5>
-            <p>Pasta salteada con atún y salsa blanca de vino.</p>
-            <span class="price">S/. 32.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/Pastas/tallarinRojosdepolloConHuancaina.jpg" alt="Tallarin Rojos de Pollo con Huancaina">
-          <div class="card-body">
-            <h5>Tallarin Rojos de Pollo con Huancaina</h5>
-            <p>Tallarines rojos acompañados de pollo y salsa huancaína.</p>
-            <span class="price">S/. 27.00</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <section data-category="Sopas">
-      <h2>🥣 Sopas</h2>
-      <div class="menu-carousel" id="sopas">
-        
-        <div class="card menu-item" data-category="Sopas">
+    <!-- SOPAS -->
+    <section class="menu-section" data-category="sopas">
+      <h2>🍲 Sopas</h2>
+      <div class="menu-grid">
+        <div class="menu-item" data-category="sopas">
           <img src="imagenes/Sopas/CaldodeCordero.jpg" alt="Caldo de Cordero">
-          <div class="card-body">
-            <h5>Caldo de Cordero</h5>
-            <p>Caldo tradicional con fideos, carne y un toque de leche evaporada, coronado con huevo frito.</p>
-            <span class="price">S/. 20.00</span>
-          </div>
+          <h5>Caldo de Cordero</h5>
+          <p>Tradicional sopa con presa de gallina y huevo duro.</p>
+          <span class="price">S/ 15.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sopas">
+        <div class="menu-item" data-category="sopas">
           <img src="imagenes/Sopas/CaldodeGallina.jpg" alt="Caldo de Gallina">
-          <div class="card-body">
-            <h5>Caldo de Gallina</h5>
-            <p>Delicioso caldo con carne, yuca, papa, choclo y col, servido con arroz y ají criollo.</p>
-            <span class="price">S/. 25.00</span>
-          </div>
+          <h5>Caldo de Gallina</h5>
+          <p>Sabrosa sopa con carne molida, leche y fideos delgados.</p>
+          <span class="price">S/ 13.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sopas">
+        <div class="menu-item" data-category="sopas">
           <img src="imagenes/Sopas/SopaalaMinuta.jpg" alt="Sopa a la Minuta">
-          <div class="card-body">
-            <h5>Sopa a la Minuta</h5>
-            <p>Reconfortante sopa de gallina con fideos, papa amarilla y huevo duro.</p>
-            <span class="price">S/. 22.00</span>
-          </div>
+          <h5>Sopa a la Minuta</h5>
+          <p>Plato arequipeño con camarones frescos y ají amarillo.</p>
+          <span class="price">S/ 25.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sopas">
-          <img src="imagenes/Sopas/SopaShambar.jpg" alt="Shambar">
-          <div class="card-body">
-            <h5>Shambar</h5>
-            <p>Tradicional sopa trujillana con menestras, trigo, carnes y hierbas aromáticas.</p>
-            <span class="price">S/. 23.00</span>
-          </div>
+        <div class="menu-item" data-category="sopas">
+          <img src="imagenes/Sopas/SopadeMenestron.jpg" alt="Sopa de Menestron">
+          <h5>Sopa de Menestron</h5>
+          <p>Nutritiva sopa con quinua, verduras y carne.</p>
+          <span class="price">S/ 12.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sopas">
+        <div class="menu-item" data-category="sopas">
+          <img src="imagenes/Sopas/SopaShambar.jpg" alt="Sopa Shambar">
+          <h5>Sopa Shambar</h5>
+          <p>Sopa verde con albahaca, fideos y carne de res.</p>
+          <span class="price">S/ 14.00</span>
+        </div>
+        <div class="menu-item" data-category="sopas">
           <img src="imagenes/Sopas/Sopadedieta.jpg" alt="Sopa de Dieta">
-          <div class="card-body">
-            <h5>Sopa de Dieta</h5>
-            <p>Ligera sopa de verduras y pollo, ideal para dietas.</p>
-            <span class="price">S/. 28.00</span>
-          </div>
+          <h5>Sopa de Dieta</h5>
+          <p>Caldo oriental con wantanes rellenos y verduras.</p>
+          <span class="price">S/ 16.00</span>
         </div>
-
-        <div class="card menu-item" data-category="Sopas">
-          <img src="imagenes/Sopas/SopadeMenestron.jpg" alt="Sopa de Menestrón">
-          <div class="card-body">
-            <h5>Sopa de Menestrón</h5>
-            <p>Caldo oriental con wantanes rellenos, fideos chinos y verduras frescas.</p>
-            <span class="price">S/. 21.00</span>
-          </div>
-        </div>
-
       </div>
     </section>
 
+    <!-- POSTRES -->
+    <section class="menu-section" data-category="postres">
+      <h2>🍰 Postres</h2>
+      <div class="menu-grid">
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Crema volteada.jpg" alt="Crema volteada">
+          <h5>Crema volteada</h5>
+          <p>Manjar blanco y merengue suave, un clásico limeño.</p>
+          <span class="price">S/ 8.00</span>
+        </div>
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Mazamorra Morada.jpg" alt="Mazamorra Morada">
+          <h5>Mazamorra Morada</h5>
+          <p>Postre de maíz morado con frutas y canela.</p>
+          <span class="price">S/ 7.00</span>
+        </div>
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Arroz con leche.jpg" alt="Arroz con Leche">
+          <h5>Arroz con Leche</h5>
+          <p>Dulce tradicional con leche, canela y pasas.</p>
+          <span class="price">S/ 7.00</span>
+        </div>
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Tres leches.jpg" alt="Tres Leches">
+          <h5>Tres Leches</h5>
+          <p>Bizcocho suave bañado en mezcla de tres leches.</p>
+          <span class="price">S/ 9.00</span>
+        </div>
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Tarta de chocolate.jpg" alt="Tarta de chocolate">
+          <h5>Tarta de chocolate</h5>
+          <p>Anillos de zapallo y camote bañados en miel.</p>
+          <span class="price">S/ 6.00</span>
+        </div>
+        <div class="menu-item" data-category="postres">
+          <img src="imagenes/Postres/Helado.jpg" alt="Helado Artesanal">
+          <h5>Helado Artesanal</h5>
+          <p>Helados naturales de frutas frescas peruanas.</p>
+          <span class="price">S/ 8.00</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- 🍹 Bebidas -->
-    <section data-category="Bebidas">
+    <!-- BEBIDAS -->
+    <section class="menu-section" data-category="bebidas">
       <h2>🍹 Bebidas</h2>
-      <div class="menu-carousel" id="bebidas">
-        <div class="card menu-item" data-category="Bebidas">
+      <div class="menu-grid">
+        <div class="menu-item" data-category="bebidas">
           <img src="imagenes/bebidas/ChichaMorada.jpg" alt="Chicha Morada">
-          <div class="card-body">
-            <h5>Chicha Morada</h5>
-            <p>Bebida tradicional de maíz morado con frutas y canela, servida fría.</p>
-            <span class="price">S/. 10.00</span>
-          </div>
+          <h5>Chicha Morada</h5>
+          <p>Bebida refrescante de maíz morado, piña y canela.</p>
+          <span class="price">S/ 6.00</span>
         </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/bebidas/LimonadaFrozen.jpg" alt="Limonada Frozen">
-          <div class="card-body">
-            <h5>Limonada Frozen</h5>
-            <p>Refrescante limonada frappé con hierbabuena.</p>
-            <span class="price">S/. 9.00</span>
-          </div>
-        </div>
-
-        <div class="card menu-item">
+        <div class="menu-item" data-category="bebidas">
           <img src="imagenes/bebidas/MaracuyaRefresco.jpg" alt="Jugo de Maracuyá">
-          <div class="card-body">
-            <h5>Jugo de Maracuyá</h5>
-            <p>Exótico jugo natural de maracuyá recién exprimido.</p>
-            <span class="price">S/. 9.00</span>
-          </div>
+          <h5>Jugo de Maracuyá</h5>
+          <p>Jugo natural de maracuyá recién exprimido.</p>
+          <span class="price">S/ 5.00</span>
         </div>
-
-        <div class="card menu-item">
+        <div class="menu-item" data-category="bebidas">
+          <img src="imagenes/bebidas/LimonadaFrozen.jpg" alt="Limonada">
+          <h5>Limonada Frozen</h5>
+          <p>Refrescante bebida natural con limón y menta.</p>
+          <span class="price">S/ 4.00</span>
+        </div>
+        <div class="menu-item" data-category="bebidas">
           <img src="imagenes/bebidas/gaseosa.jpg" alt="Gaseosa">
-          <div class="card-body">
-            <h5>Gaseosa</h5>
-            <p>Gaseosa clásica de 500ml.</p>
-            <span class="price">S/. 6.00</span>
-          </div>
+          <h5>Gaseosa</h5>
+          <p>Bebida caliente con cebada, linaza y hierbas.</p>
+          <span class="price">S/ 5.00</span>
         </div>
-
-        <div class="card menu-item">
-          <img src="imagenes/bebidas/cervezanegra.jpg" alt="Cerveza Cusqueña">
-          <div class="card-body">
-            <h5>Cerveza Cusqueña</h5>
-            <p>Cerveza premium peruana, rubia o negra.</p>
-            <span class="price">S/. 12.00</span>
-          </div>
+        <div class="menu-item" data-category="bebidas">
+          <img src="imagenes/bebidas/cervezanegra.jpg" alt="Cerveza Negra">
+          <h5>Cerveza Negra</h5>
+          <p>Café artesanal 100% peruano de altura.</p>
+          <span class="price">S/ 6.00</span>
         </div>
-
-        <div class="card menu-item">
+        <div class="menu-item" data-category="bebidas">
           <img src="imagenes/bebidas/piscoSour.jpg" alt="Pisco Sour">
-          <div class="card-body">
-            <h5>Pisco Sour</h5>
-            <p>El cóctel nacional del Perú con pisco, limón y clara de huevo.</p>
-            <span class="price">S/. 18.00</span>
-          </div>
+          <h5>Pisco Sour</h5>
+          <p>Cóctel clásico peruano con pisco y limón.</p>
+          <span class="price">S/ 12.00</span>
         </div>
       </div>
     </section>
 
-  </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Restaurante Siete Sopas - Todos los derechos reservados </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
